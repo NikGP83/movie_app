@@ -1,46 +1,50 @@
-# Getting Started with Create React App
+  #Стажировка Aston(ex Andersen)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Техническое задание TMDB Portal.
+Цель: получить опыт работы с Rest API в React, Redux/RTK/RTK Query, Redux Thunk, React Router, а
+также попрактиковать хуки.
+Необходимо создать приложение TMDB Portal. Для этого нужно зарегистрироваться на TMDB,
+чтобы получить ключ к API. Так же вам может быть потребуется воспользоваться VPN, поскольку
+сервис заблокирован для пользователей из РФ и, возможно, других стран. Сама документация API
+находится здесь https://developers.themoviedb.org/3/getting-started/introduction.
+Ключ API можно получить здесь https://www.themoviedb.org/settings/api.
+Библиотеки, которые следует использовать для выполнения задачи:
+1) Использовать React JS, react hooks, Redux/ RTK/RTK Query, Redux thunk или другую Redux
+Middleware, React router, Typescript (опционально).
+2) Все остальное - по вашему выбору.
+Задача:
+Необходимо реализовать приложение, которое состоит из:
+1) Главная страница.
+На ней должен отображаться список фильмов. Список фильмов можно отфильтровать по
+следующим параметрам:
+• Фильмы с самым высоким рейтингом на TMDB
+• Текущие популярные фильмов на TMDB
+• Недавно вышедшие фильмы на TMDB
+• И другие (опционально)
+Реализовать пагинацию для вывода списка фильмов.
+Реализовать поиск фильма по введенной строке из поля поиска.
+2) Страница с информацией о конкретном фильме.
+3) Страница со списком популярных актеров.
+Реализовать пагинацию для вывода списка актеров.
+Реализовать поиск актера по введенной строке из поля поиска.
+4) Страница с информацией о конкретном актере.
+5) 404 страница.
+6) Страница для Error Boundary.
+Так же необходимо предусмотреть навигацию по сайту, пагинацию или ленивую подгрузку
 
-## Available Scripts
+контента, лоадеры, обернуть приложение в Error Boundary (https://ru.legacy.reactjs.org/docs/error-
+boundaries.html#introducing-error-boundaries).
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+При создании поля поиска не забудьте реализовать debounce, если вешаете запросы на onChange
+инпута, либо делайте кнопку для отправки запроса и очищайте после этого поле поиска.
+Конечное приложение должно быть развернуто на каком-нибудь сервере и доступно для
+просмотра в интернете. Вы можете использовать Github Pages или любое другое решение.
+ТЗ написано максимально кратко. Для вывода контента страницы используйте данные, которые
+предоставляет API. Расписывать поля не буду. Я рассчитываю, что у вас получится сайт с приятным
+UI интерфейсом и удобной навигацией. Вы можете усложнить приложение, добавив новые
+страницы, анимацию, расширив функционал различными фильтрами, сортировками, поиском.
+Использование Type Script приветствуется, но не является обязательным, поскольку для
+некоторых эта задача может быть очень сложной. Адаптация сайта под мобильные устройства
+опциональная, будет плюсом, если реализуете.
+Если сложно придумать интерфейс - вдохновляйтесь сайтом TMDB https://www.themoviedb.org/.
+Постарайтесь реализовать свои идеи и создать хороший продукт. Хорошего вам кодинга!

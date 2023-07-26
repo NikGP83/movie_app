@@ -1,13 +1,50 @@
+@font-face {
+  font-family: 'BenchNine';
+  src: local('BenchNine Bold'),
+      url('../public/fonts/BenchNine-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BenchNine';
+  src: local('BenchNine Regular'),
+      url('../public/fonts/BenchNine-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BenchNine';
+  src: local('BenchNine Light'),
+      url('../public/fonts/BenchNine-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+
 body {
+  font-family: 'BenchNine';
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #190401;
+  color: #FFFFFF;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  @media (min-width: 768px) {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
 }
