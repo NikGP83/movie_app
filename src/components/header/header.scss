@@ -1,3 +1,7 @@
+.header {
+  border-bottom: 2px solid #D9D9D9; 
+}
+
 .header-list {
   display: flex;
   justify-content: center;
@@ -7,7 +11,7 @@
 
 .header-link {
   text-decoration: none;
-  padding: 2px 35px;
+  padding: 4px 35px;
 }
 
 .header-item {
@@ -19,7 +23,7 @@
 .header-text {
   color: #ffffff;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 16px;
 }

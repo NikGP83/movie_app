@@ -1,0 +1,61 @@
+.movie-chosen-promo {
+  position: relative;
+  border-bottom: 1px solid #d9d9d9;
+}
+.movie-feed-list {
+  padding: 0;
+  list-style: none;
+  padding: 45px 16px 15px 16px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.movie-feed-item {
+  width: 102px;
+  margin-right: 18px;
+}
+
+.active-movie-card {
+  position: relative;
+  bottom: 40px;
+  transition: bottom 1s ease-out 0.5s;
+}
+.movie-feed-item:hover {
+  position: relative;
+  bottom: 40px;
+  transition: bottom 1s ease-out 0.5s;
+}
+
+.movie-feed-title {
+  text-align: center;
+}
+
+.movie-feed-text {
+  text-transform: uppercase;
+}
+
+.movie-info-block {
+  width: 451px;
+  position: absolute;
+  top: 340px;
+  left: 50px;
+}
+
+.description-title {
+  text-transform: capitalize;
+}
+
+.description-genres-block {
+  padding: 0;
+  list-style: none;
+}
+
+.description-genres-text {
+  text-transform: uppercase;
+}
+
+.description-text {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+}
