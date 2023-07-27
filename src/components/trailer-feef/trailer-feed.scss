@@ -1,0 +1,43 @@
+.trailer-feed-block {
+  border-top: 1px solid #959595;
+  border-bottom: 1px solid #959595;
+}
+
+.trailer-feed-list {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0;
+}
+
+.trailer-feed-item {
+  position: relative;
+  margin-right: 36px;
+}
+
+.play-btn-block {
+  display: flex;
+  position: absolute;
+  bottom: 105px;
+  left: 30px;
+}
+
+.play-btn-text {
+  align-self: center;
+  text-transform: uppercase;
+  color: #e4e4e4;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.play-btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 60px;
+  height: 56px;
+  background-image: url('../../../public/img/play-btn.svg');
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
