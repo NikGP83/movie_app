@@ -4,7 +4,7 @@ import './movie-feed.scss';
 function MovieFeed() {
   return (
     <section className="movie-feed-section">
-      <div className="movie-chosen-promo">
+      <div className="movie-feed-promo">
         <div className="promo-poster-block">
           <img
             src="./img/sjblackwidow.jpg"
