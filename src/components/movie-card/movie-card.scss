@@ -1,0 +1,26 @@
+.movie-feed-card {
+  cursor: pointer;
+}
+
+.movie-poster-img {
+  object-fit: cover;
+  border-radius: 10px;
+}
+.movie-feed-title {
+  text-align: center;
+}
+
+.movie-feed-text {
+  text-transform: uppercase;
+}
+
+.active-movie-card {
+  position: relative;
+  bottom: 40px;
+  transition: bottom 1s ease-out 0.5s;
+}
+.movie-feed-item:hover {
+  position: relative;
+  bottom: 40px;
+  transition: bottom 1s ease-out 0.5s;
+}

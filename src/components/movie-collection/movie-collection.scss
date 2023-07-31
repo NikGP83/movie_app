@@ -12,6 +12,7 @@
 .genres-list-wrapper {
   padding-top: 42px;
   border-top: 1px solid #959595;
+  margin-bottom: 41px;
 }
 
 .genres-list {
@@ -31,7 +32,7 @@
 }
 
 .genres-list-item {
-    margin-bottom: 21px;
+  margin-bottom: 21px;
 }
 
 .genres-list-button {
@@ -53,4 +54,15 @@
 .genres-title {
   margin-left: 150px;
   font-size: 25px;
+}
+
+.movie-collection-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.movie-collection-item {
+  margin-right: 72px;
 }

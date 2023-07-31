@@ -1,5 +1,6 @@
 import React from 'react';
 import './movie-feed.scss';
+import MovieCard from '../movie-card/movie-card';
 
 function MovieFeed() {
   return (
@@ -33,52 +34,7 @@ function MovieFeed() {
       </div>
       <ul className="movie-feed-list">
         <li className="movie-feed-item">
-          <div className="movie-feed-card">
-            <div className="movie-feed-poster">
-              <img
-                src="./img/avengers.jpg"
-                alt="movie-poster"
-                className="movie-poster-img"
-                width="102"
-                height="154"
-              />
-            </div>
-            <div className="movie-feed-title">
-              <span className="movie-feed-text">Avengers</span>
-            </div>
-          </div>
-        </li>
-        <li className="movie-feed-item active-item active-movie-card">
-          <div className="movie-feed-card">
-            <div className="movie-feed-poster">
-              <img
-                src="./img/avengers.jpg"
-                alt="movie-poster"
-                className="movie-poster-img"
-                width="102"
-                height="154"
-              />
-            </div>
-            <div className="movie-feed-title">
-              <span className="movie-feed-text">Avengers</span>
-            </div>
-          </div>
-        </li>
-        <li className="movie-feed-item">
-          <div className="movie-feed-card">
-            <div className="movie-feed-poster">
-              <img
-                src="./img/avengers.jpg"
-                alt="movie-poster"
-                className="movie-poster-img"
-                width="102"
-                height="154"
-              />
-            </div>
-            <div className="movie-feed-title">
-              <span className="movie-feed-text">Avengers</span>
-            </div>
-          </div>
+          <MovieCard height="154" width="102" />
         </li>
       </ul>
     </section>

@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../header/header';
 import MovieFeed from '../movie-feed/movie-feed';
 import MovieCollection from '../movie-collection/movie-collection';
+import SiteFooter from '../site-footer/site-footer';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <MovieFeed />
       <MovieCollection />
+      <SiteFooter />
     </div>
   );
 }

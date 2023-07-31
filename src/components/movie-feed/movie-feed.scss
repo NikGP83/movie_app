@@ -12,28 +12,12 @@
 }
 
 .movie-feed-item {
+  position: relative;
   width: 102px;
   margin-right: 18px;
 }
 
-.active-movie-card {
-  position: relative;
-  bottom: 40px;
-  transition: bottom 1s ease-out 0.5s;
-}
-.movie-feed-item:hover {
-  position: relative;
-  bottom: 40px;
-  transition: bottom 1s ease-out 0.5s;
-}
 
-.movie-feed-title {
-  text-align: center;
-}
-
-.movie-feed-text {
-  text-transform: uppercase;
-}
 
 .movie-info-block {
   width: 451px;

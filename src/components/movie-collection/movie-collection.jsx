@@ -1,6 +1,7 @@
 import React from 'react';
 import './movie-collection.scss';
 import TrailerFeed from '../trailer-feed/trailer-feed';
+import MovieCard from '../movie-card/movie-card';
 
 function MovieCollection() {
   return (
@@ -36,6 +37,17 @@ function MovieCollection() {
           </li>
         </ul>
       </div>
+      <ul className="movie-collection-list">
+        <li className="movie-collection-item">
+          <MovieCard width="210" height="301" />
+        </li>
+        <li className="movie-collection-item">
+          <MovieCard width="210" height="301" />
+        </li>
+        <li className="movie-collection-item">
+          <MovieCard width="210" height="301" />
+        </li>
+      </ul>
     </section>
   );
 }
