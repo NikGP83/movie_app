@@ -43,6 +43,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@types/react-redux": "^7.1.25",
     "@typescript-eslint/eslint-plugin": "^6.2.0",
     "@typescript-eslint/parser": "^6.2.0",
     "eslint-config-htmlacademy": "^9.1.1",

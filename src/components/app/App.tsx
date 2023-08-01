@@ -5,6 +5,7 @@ import MovieCollection from '../movie-collection/movie-collection';
 import SiteFooter from '../site-footer/site-footer';
 
 function App() {
+
   return (
     <div className="App">
       <Header />
