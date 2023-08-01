@@ -1,8 +1,11 @@
 import React from 'react';
 import './movie-feed.scss';
 import MovieCard from '../movie-card/movie-card';
+import { useFetchPopularMoviesQuery } from '../../services/movie-service';
 
 function MovieFeed() {
+  const {data} = useFetchPopularMoviesQuery('');
+  window.console.log(data);
   return (
     <section className="movie-feed-section">
       <div className="movie-feed-promo">

@@ -4,8 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import App from './components/app/App';
 import { Provider } from 'react-redux';
-import { setupStore } from './store/store';
-
+import { store } from './store/store';
 
 const router = createBrowserRouter([
   {
@@ -14,7 +13,6 @@ const router = createBrowserRouter([
   },
 ]);
 
-const store = setupStore();
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
