@@ -1,6 +1,8 @@
+/* eslint-disable camelcase */
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { BASE_URL } from '../const/const';
-import { MovieResponse } from '../types/types';
+import { Movies } from '../types/types';
+import { object, number, array } from 'yup';
 
 const headersOptions = {
   Authorization:
@@ -8,21 +10,32 @@ const headersOptions = {
   accept: 'application/json',
 };
 
+const responseSchema = object({
+  page: number(),
+  results: array().required(),
+  total_pages: number(),
+  total_results: number(),
+});
+
 export const movieAPI = createApi({
   reducerPath: 'movieAPI',
   baseQuery: fetchBaseQuery({ baseUrl: BASE_URL }),
   endpoints: (build) => ({
-    fetchPopularMovies: build.query<MovieResponse, string>({
+    fetchPopularMovies: build.query<Movies, string>({
       query: () => ({
         url: '/movie/popular',
         headers: headersOptions,
       }),
+      transformResponse: (response: unknown) =>
+        responseSchema.validateSync(response),
     }),
-    fetchTrendingMovies: build.query<MovieResponse, string>({
+    fetchTrendingMovies: build.query<Movies, string>({
       query: () => ({
         url: '/trending/movie/day?language=en-US',
         headers: headersOptions,
       }),
+      transformResponse: (response: unknown) =>
+        responseSchema.validateSync(response),
     }),
   }),
 });

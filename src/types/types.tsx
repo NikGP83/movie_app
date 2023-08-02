@@ -1,8 +1,8 @@
-export interface MovieResponse {
-  page: number;
+export interface Movies {
+  page?: number;
   results: MovieData[];
-  total_pages: number;
-  total_results: number;
+  total_pages?: number;
+  total_results?: number;
 }
 
 export interface MovieData {
