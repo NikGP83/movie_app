@@ -1,11 +1,16 @@
 import React from 'react';
 import './movie-feed.scss';
 import MovieCard from '../movie-card/movie-card';
-import { useFetchPopularMoviesQuery } from '../../services/movie-service';
+import { useFetchTrendingMoviesQuery } from '../../services/movie-service';
 
 function MovieFeed() {
-  const {data} = useFetchPopularMoviesQuery('');
-  window.console.log(data);
+  const { data } = useFetchTrendingMoviesQuery('');
+  if (typeof data === 'undefined') {
+    return null;
+  }
+  const { results } = data;
+
+  window.console.log(results);
   return (
     <section className="movie-feed-section">
       <div className="movie-feed-promo">
@@ -36,9 +41,11 @@ function MovieFeed() {
         </div>
       </div>
       <ul className="movie-feed-list">
-        <li className="movie-feed-item">
-          <MovieCard height="154" width="102" />
-        </li>
+        {results.map((filmItem) => (
+          <li key={filmItem.id} className="movie-feed-item">
+            <MovieCard width="150" height="225" filmItem={filmItem}/>
+          </li>
+        ))}
       </ul>
     </section>
   );

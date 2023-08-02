@@ -2,6 +2,7 @@
   position: relative;
 }
 .movie-feed-list {
+  overflow: scroll;
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #d9d9d9;
   padding: 0;
@@ -12,8 +13,6 @@
 }
 
 .movie-feed-item {
-  position: relative;
-  width: 102px;
   margin-right: 18px;
 }
 

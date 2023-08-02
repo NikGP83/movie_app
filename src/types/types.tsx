@@ -1,6 +1,8 @@
 export interface MovieResponse {
   page: number;
-  result: MovieData[];
+  results: MovieData[];
+  total_pages: number;
+  total_results: number;
 }
 
 export interface MovieData {
