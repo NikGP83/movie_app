@@ -6,7 +6,7 @@ import SiteFooter from '../site-footer/site-footer';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Header />
       <MovieFeed />
       <MovieCollection />
