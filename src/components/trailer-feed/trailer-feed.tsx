@@ -10,7 +10,7 @@ const arr = [1, 2, 3, 4, 5, 6];
 
 function TrailerFeed() {
   return (
-    <div className="trailer-wrapper">
+    <div className="trailer-wrapper" id="trailers">
       <Swiper
         autoplay={{ delay: 3000 }}
         speed={1000}
@@ -36,7 +36,7 @@ function TrailerFeed() {
           },
           1700: {
             slidesPerView: 3.5,
-          }
+          },
         }}
       >
         {arr.map((el) => (

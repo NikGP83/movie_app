@@ -9,13 +9,13 @@ function Header() {
         <div className="container">
           <ul className="header-list">
             <li className="header-item">
-              <Link to="/#" className="header-link">
-                <span className="header-text">About</span>
-              </Link>
+              <a href="#movies" className="header-link">
+                <span className="header-text">Movies</span>
+              </a>
             </li>
             <li className="header-item">
               <Link to="/#" className="header-link">
-                <span className="header-text">Movies</span>
+                <span className="header-text">Actors</span>
               </Link>
             </li>
             <li className="header-item logo-item">
@@ -26,13 +26,13 @@ function Header() {
               </Link>
             </li>
             <li className="header-item">
-              <Link to="/#" className="header-link">
-                <span className="header-text">Series</span>
-              </Link>
+              <a href="#trailers" className="header-link">
+                <span className="header-text">Trailers</span>
+              </a>
             </li>
             <li className="header-item">
               <Link to="/#" className="header-link">
-                <span className="header-text">Upcoming</span>
+                <span className="header-text">About</span>
               </Link>
             </li>
           </ul>

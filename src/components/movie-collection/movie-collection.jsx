@@ -7,37 +7,26 @@ function MovieCollection() {
   return (
     <section className="movie-collection">
       <TrailerFeed />
-      <div className="genres-list-wrapper">
-        <div className="genres-title">Genres</div>
-        <ul className="genres-list">
-          <li className="genres-list-item">
-            <button className="genres-list-button">
-              <span className="genres-list-text">Action</span>
+      <div className="film-categories-wrapper">
+        <ul className="film-categories-list">
+          <li className="film-categories-list-item">
+            <button className="film-categories-list-button">
+              <span className="film-categories-list-text">Top rating</span>
             </button>
           </li>
-          <li className="genres-list-item">
-            <button className="genres-list-button">
-              <span className="genres-list-text">Action</span>
+          <li className="film-categories-list-item">
+            <button className="film-categories-list-button">
+              <span className="film-categories-list-text">Upcoming</span>
             </button>
           </li>
-          <li className="genres-list-item">
-            <button className="genres-list-button">
-              <span className="genres-list-text">Action</span>
-            </button>
-          </li>
-          <li className="genres-list-item">
-            <button className="genres-list-button">
-              <span className="genres-list-text">Action</span>
-            </button>
-          </li>
-          <li className="genres-list-item">
-            <button className="genres-list-button">
-              <span className="genres-list-text">Action</span>
+          <li className="film-categories-list-item">
+            <button className="film-categories-list-button">
+              <span className="film-categories-list-text">What&apos;s Popular</span>
             </button>
           </li>
         </ul>
       </div>
-      <ul className="movie-collection-list">
+      <ul className="movie-collection-list" id="movies">
         <li className="movie-collection-item">
           <MovieCard width="210" height="301" />
         </li>
