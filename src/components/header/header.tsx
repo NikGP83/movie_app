@@ -37,6 +37,10 @@ function Header() {
             </li>
           </ul>
         </div>
+        <div className="search-block">
+          <input type="text" id="search" className="search-field" />
+          <label htmlFor="search" className="search-field-label"></label>
+        </div>
       </nav>
     </header>
   );

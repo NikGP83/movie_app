@@ -1,15 +1,24 @@
 .movie-feed-promo {
   position: relative;
 }
-.movie-feed-list {
-  overflow: scroll;
-  border-bottom: 1px solid #d9d9d9;
+
+.movie-feed-list-wrapper{
   border-top: 1px solid #d9d9d9;
+
+}
+
+.movie-feed-list {
+  border-bottom: 1px solid #d9d9d9;
   padding: 0;
   list-style: none;
-  padding: 45px 16px 15px 16px;
+  padding: 0px 16px 20px 16px;
   display: flex;
   flex-wrap: nowrap;
+}
+
+.movie-feed-list-title {
+  margin-left: 20px;
+  font-size: 30px;
 }
 
 .movie-feed-item {

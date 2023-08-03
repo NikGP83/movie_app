@@ -40,13 +40,16 @@ function MovieFeed() {
           </div>
         </div>
       </div>
-      <ul className="movie-feed-list">
-        {results.map((filmItem) => (
-          <li key={filmItem.id} className="movie-feed-item">
-            <MovieCard width="150" height="225" filmItem={filmItem}/>
-          </li>
-        ))}
-      </ul>
+      <div className="movie-feed-list-wrapper">
+        <h3 className="movie-feed-list-title">Trending</h3>
+        <ul className="movie-feed-list">
+          {results.map((filmItem) => (
+            <li key={filmItem.id} className="movie-feed-item">
+              <MovieCard width="150" height="225" filmItem={filmItem} />
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 }
