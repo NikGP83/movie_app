@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
+import { API_ENDPOINTS } from './../const/const';
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { BASE_URL } from '../const/const';
 import { Movies } from '../types/types';
 import { object, number, array } from 'yup';
 
@@ -19,19 +19,11 @@ const responseSchema = object({
 
 export const movieAPI = createApi({
   reducerPath: 'movieAPI',
-  baseQuery: fetchBaseQuery({ baseUrl: BASE_URL }),
+  baseQuery: fetchBaseQuery({baseUrl: API_ENDPOINTS.baseUrl}),
   endpoints: (build) => ({
-    fetchPopularMovies: build.query<Movies, string>({
-      query: () => ({
-        url: '/movie/popular',
-        headers: headersOptions,
-      }),
-      transformResponse: (response: unknown) =>
-        responseSchema.validateSync(response),
-    }),
-    fetchTrendingMovies: build.query<Movies, string>({
-      query: () => ({
-        url: '/trending/movie/day?language=en-US',
+    fetchMovies: build.query<Movies, string>({
+      query: (queryParams) => ({
+        url: queryParams,
         headers: headersOptions,
       }),
       transformResponse: (response: unknown) =>
@@ -40,5 +32,5 @@ export const movieAPI = createApi({
   }),
 });
 
-export const { useFetchPopularMoviesQuery, useFetchTrendingMoviesQuery } =
+export const { useFetchMoviesQuery } =
   movieAPI;

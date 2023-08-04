@@ -39,6 +39,25 @@
   border-radius: 40px;
 }
 
+.movie-collection-list {
+  padding: 0;
+  padding-left: 51px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.movie-collection-pagination-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.movie-collection-item {
+  margin-bottom: 15px;
+}
+
 .film-categories-list-item {
   margin-right: 30px;
 }
@@ -77,4 +96,8 @@
 
 .movie-collection-item {
   margin-right: 72px;
+}
+
+.total-page-count-text {
+  font-size: 30px;
 }

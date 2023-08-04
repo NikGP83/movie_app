@@ -1,10 +1,10 @@
 import React from 'react';
 import './movie-feed.scss';
 import MovieCard from '../movie-card/movie-card';
-import { useFetchTrendingMoviesQuery } from '../../services/movie-service';
+import { useFetchMoviesQuery } from '../../services/movie-service';
 
 function MovieFeed() {
-  const { data } = useFetchTrendingMoviesQuery('');
+  const { data } = useFetchMoviesQuery('/trending/movie/day?language=en-US');
   if (typeof data === 'undefined') {
     return null;
   }

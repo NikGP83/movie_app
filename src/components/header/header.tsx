@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './header.scss';
+import { APP_ROUTES } from '../../const/const';
 
 function Header() {
+
   return (
     <header className="header">
       <nav className="header-nav">
@@ -14,7 +16,7 @@ function Header() {
               </a>
             </li>
             <li className="header-item">
-              <Link to="/#" className="header-link">
+              <Link to={APP_ROUTES.actorsList} className="header-link">
                 <span className="header-text">Actors</span>
               </Link>
             </li>
