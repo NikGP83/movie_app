@@ -43,6 +43,7 @@
   padding: 0;
   padding-left: 51px;
   display: flex;
+  list-style: none;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
@@ -52,10 +53,6 @@
   list-style: none;
   display: flex;
   justify-content: center;
-}
-
-.movie-collection-item {
-  margin-bottom: 15px;
 }
 
 .film-categories-list-item {
@@ -75,7 +72,6 @@
 
 .genres-list-text {
   color: #fff;
-  font-family: ABeeZee;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -87,17 +83,19 @@
   font-size: 25px;
 }
 
-.movie-collection-list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-}
-
 .movie-collection-item {
   margin-right: 72px;
+  margin-bottom: 32px;
 }
 
 .total-page-count-text {
   font-size: 30px;
+}
+
+.movie-collection-item {
+  transition: 1s;
+}
+
+.movie-collection-item:hover {
+ transform: scale(1.2); 
 }

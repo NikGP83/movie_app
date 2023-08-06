@@ -42,3 +42,11 @@
   background-repeat: no-repeat;
   margin-right: 10px;
 }
+
+.trailer-block {
+  transition: 1s;
+}
+
+.trailer-block:hover {
+  transform: scale(1.1);
+}
