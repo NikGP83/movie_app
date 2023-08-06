@@ -10,7 +10,6 @@ function MovieFeed() {
   }
   const { results } = data;
 
-  window.console.log(results);
   return (
     <section className="movie-feed-section">
       <div className="movie-feed-promo">

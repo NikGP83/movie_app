@@ -14,3 +14,13 @@ export const APP_ROUTES = {
   actorsList: 'actors-List',
   movieRoom: 'movie-room',
 } as const;
+
+export const framerMotionAnimateSettings = {
+  visible: (i: number) => ({
+    opacity: 1,
+    transition: {
+      delay: i * 0.09,
+    },
+  }),
+  hidden: { opacity: 0.0 },
+};
