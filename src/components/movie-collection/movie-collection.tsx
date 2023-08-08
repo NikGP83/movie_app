@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './movie-collection.scss';
 import TrailerFeed from '../trailer-feed/trailer-feed';
 import MovieCard from '../movie-card/movie-card';
-import { API_ENDPOINTS, framerMotionAnimateSettings } from '../../const/const';
+import { API_ENDPOINTS, APP_ROUTES, framerMotionAnimateSettings } from '../../const/const';
 import { useFetchMoviesQuery } from '../../services/movie-service';
 import { motion } from 'framer-motion';
 
@@ -11,10 +11,6 @@ function MovieCollection() {
     API_ENDPOINTS.topRatedMovies,
   );
   const [page, setPage] = useState('1');
-  // const createQuery = () => {
-  //   setPage((prev) => (+prev + 1).toString());
-  //   setEndpoint(endpoint + page);
-  // };
 
   const createQuery = () => {
     setPage((prev) => prev + 1);
@@ -86,7 +82,7 @@ function MovieCollection() {
             custom={i}
             transition={{ duration: 0.5 }}
           >
-            <MovieCard width="210" height="301" filmItem={movie} />
+            <MovieCard to={`${APP_ROUTES.movieRoom}/${movie.id}`} width="210" height="301" filmItem={movie} />
           </motion.li>
         ))}
       </ul>

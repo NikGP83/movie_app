@@ -48,8 +48,9 @@ function TrailerFeed() {
                 className="trailer-poster"
               />
               <div className="play-btn-block">
-                <button className="play-btn" />
-                <span className="play-btn-text">Watch trailer</span>
+                <button className="play-btn">
+                  <span className="play-btn-text">Watch trailer</span>
+                </button>
               </div>
             </div>
           </SwiperSlide>

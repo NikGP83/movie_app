@@ -44,7 +44,11 @@ function MovieFeed() {
         <ul className="movie-feed-list">
           {results.map((filmItem) => (
             <li key={filmItem.id} className="movie-feed-item">
-              <MovieCard width="150" height="225" filmItem={filmItem} />
+              <MovieCard
+                width="150"
+                height="225"
+                filmItem={filmItem}
+              />
             </li>
           ))}
         </ul>
