@@ -17,7 +17,6 @@ function MovieFeed() {
           <img
             src="./img/sjblackwidow.jpg"
             alt="trailer"
-            width="1449"
             height="736"
           />
         </div>

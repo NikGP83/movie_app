@@ -1,5 +1,7 @@
   #Стажировка Aston(ex Andersen)
 
+  Внимание, для запуска или просмотра сайта нужно включить VPN, так как для запросов используется API TMDB.
+
 Техническое задание TMDB Portal.
 Цель: получить опыт работы с Rest API в React, Redux/RTK/RTK Query, Redux Thunk, React Router, а
 также попрактиковать хуки.

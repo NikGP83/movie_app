@@ -32,11 +32,6 @@ function Header() {
                 <span className="header-text">Trailers</span>
               </a>
             </li>
-            <li className="header-item">
-              <Link to="/#" className="header-link">
-                <span className="header-text">About</span>
-              </Link>
-            </li>
           </ul>
         </div>
         <div className="search-block">

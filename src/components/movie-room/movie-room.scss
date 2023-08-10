@@ -8,7 +8,7 @@
 }
 
 .movie-overview {
-    margin-bottom: 94px;
+    margin-bottom: 20px;
 }
 
 .movie-title {
@@ -49,7 +49,7 @@
 }
 
 .cast-list {
-    max-width: 600px;
+    max-width: 950px;
     list-style: none;
     padding: 0;
     display: flex;
@@ -60,6 +60,9 @@
     margin-right: 15px;
 }
 
+.overview {
+    font-size: 20px;
+}
 .cast-text {
     font-size: 20px;
 }

@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import { API_ENDPOINTS } from './../const/const';
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { Credits, Images, MovieDetails, Movies } from '../types/types';
+import { Credits, Images, MovieDetails, Movies, PopularActors } from '../types/types';
 import { object, number, array } from 'yup';
 
 const headersOptions = {
@@ -41,9 +41,15 @@ export const movieAPI = createApi({
         headers: headersOptions,
       })
     }),
-    fetchPopularPeople: build.query<Movies, string>({
+    fetchPopularPeople: build.query<PopularActors, string>({
+      query: (page) => ({
+        url: `/person/popular?language=en-US&page=${page}`,
+        headers: headersOptions,
+      })
+    }),
+    fetchActorById: build.query<PopularActors, string>({
       query: (id) => ({
-        url: `/person/popular?language=en-US&page=${id}`,
+        url: `/person/${id}?language=en-US`,
         headers: headersOptions,
       })
     }),
@@ -62,5 +68,5 @@ export const movieAPI = createApi({
   }),
 });
 
-export const { useFetchMoviesQuery, useFetchMovieDetailsQuery, useFetchMovieImagesQuery, useFetchCreditsQuery, useFetchPopularPeopleQuery, useFetchVideoQuery } =
+export const { useFetchMoviesQuery, useFetchMovieDetailsQuery, useFetchMovieImagesQuery, useFetchCreditsQuery, useFetchPopularPeopleQuery, useFetchVideoQuery, useFetchActorByIdQuery } =
   movieAPI;

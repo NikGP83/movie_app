@@ -29,7 +29,6 @@ function MovieCollection() {
   if (typeof movieData === 'undefined') {
     return null;
   }
-  window.console.log(endpoint, page);
   return (
     <section className="movie-collection">
       <TrailerFeed />

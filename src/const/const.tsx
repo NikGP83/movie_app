@@ -5,13 +5,14 @@ export const API_ENDPOINTS = {
   upcomingMovies: '/movie/upcoming',
   topRatedMovies: 'movie/top_rated',
   nowPlayingMovies: '/movie/now_playing',
-  trendingActorsList: 'trending/person/day?language=en-US',
+  popularActorsList: '/person/popular',
 } as const;
 
 
 export const APP_ROUTES = {
   home: '/',
-  actorsList: 'actors-List',
+  actorsList: 'actors-list',
+  actorsProfile: 'actors-room',
   movieRoom: 'movie-room',
 } as const;
 
