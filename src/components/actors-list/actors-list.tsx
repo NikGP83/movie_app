@@ -21,7 +21,7 @@ function ActorsList() {
       <section className="popular-people container">
         <ul className="popular-people-list">
           {actorsArr?.map((actor) => (
-            <Link key={actor.id} to={`${APP_ROUTES.actorsProfile}/${actor.id}`} className="popular-people-link">
+            <Link key={actor.id} to={`/${APP_ROUTES.actorsProfile}/${actor.id}`} className="popular-people-link">
               <li className="popular-people-item">
                 <div className="popular-people-block">
                   <img

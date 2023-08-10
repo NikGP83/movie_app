@@ -28,7 +28,7 @@ const router = createBrowserRouter([
     element: <ActorsList />,
   },
   {
-    path: `${APP_ROUTES.actorsList}/:id?`,
+    path: `${APP_ROUTES.actorsProfile}/:id?`,
     element: <ActorsRoom />,
   },
 ]);
