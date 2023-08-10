@@ -1,0 +1,65 @@
+.movie-room-poster {
+    margin-right: 40px;
+}
+.movie-room-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.movie-overview {
+    margin-bottom: 94px;
+}
+
+.movie-title {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.genres-list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    margin-top: 0;
+}
+
+.genres-item {
+    margin-right: 10px;
+}
+
+.genre-item-text {
+    font-size: 20px;
+}
+
+.movie-overview-title {
+    text-transform: uppercase;
+}
+
+.creator-title {
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+.creator-text{
+    font-size: 25px;
+}
+
+.cast-title {
+    font-size: 30px;
+}
+
+.cast-list {
+    max-width: 600px;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cast-list-item {
+    margin-right: 15px;
+}
+
+.cast-text {
+    font-size: 20px;
+}
+

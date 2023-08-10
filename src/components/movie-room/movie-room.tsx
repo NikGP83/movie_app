@@ -7,6 +7,7 @@ import {
   useFetchMovieDetailsQuery,
   useFetchMovieImagesQuery,
 } from '../../services/movie-service';
+import './movie-room.scss';
 
 function MovieRoom() {
   const { id } = useParams();
@@ -14,7 +15,7 @@ function MovieRoom() {
     return null;
   }
   const { data } = useFetchMovieDetailsQuery(id);
-  const { castArr } = useFetchCreditsQuery(id, {
+  const { castArr, crewArr } = useFetchCreditsQuery(id, {
     selectFromResult: ({ data: creditsData }) => ({
       castArr: creditsData?.cast,
       crewArr: creditsData?.crew,
@@ -29,40 +30,49 @@ function MovieRoom() {
   if (typeof data === 'undefined') {
     return null;
   }
-  window.console.log(imageArr);
+
+  const movieCreatorName = crewArr?.find(
+    (crew) => crew.known_for_department === 'Directing',
+  );
+
+  window.console.log(castArr);
   return (
     <>
       <Header />
       <section className="movie-room">
-        <div className="movie-poster">
-          <img
-            src={`https://image.tmdb.org/t/p/original${data?.poster_path}`}
-            alt="movie poster"
-            className="movie-poster-img"
-          />
-        </div>
-        <div className="movie-content">
-          <div className="movie-info">
-            <div className="movie-trailer">
-              <video></video>
-            </div>
-            <div className="movie-overview">
-              <ul className="genres">
+        <div className="movie-room-wrapper">
+          <div className="movie-room-poster">
+            <img
+              src={`https://image.tmdb.org/t/p/original${data?.poster_path}`}
+              alt="movie poster"
+              className="movie-room-poster-img"
+              height="735"
+            />
+          </div>
+          <div className="movie-content">
+            <div className="movie-title-wrapper">
+              <h2 className="movie-title">{data.title}</h2>
+              <ul className="genres-list">
                 {data.genres.map((genre) => (
                   <li key={genre.id} className="genres-item">
-                    {genre.name}
+                    <span className="genre-item-text">{genre.name}</span>
                   </li>
                 ))}
               </ul>
+            </div>
+            <div className="movie-overview">
+              <h2 className="movie-overview-title">Overview</h2>
               <p className="overview">{data?.overview}</p>
-              <h2 className="command">Director</h2>
-              <p className="command-paragraph">
-                <span className="command-tex"></span>
-              </p>
+            </div>
+            <div className="movie-cast-block">
+              <div className="creator-block">
+                <h2 className="creator-title">Director:</h2>
+                <span className="creator-text">{movieCreatorName?.name}</span>
+              </div>
               <h2 className="cast-title">Cast</h2>
-              <ul className="cast-block">
+              <ul className="cast-list">
                 {castArr?.map((actor) => (
-                  <li key={actor.id} className="cast-item">
+                  <li key={actor.id} className="cast-list-item">
                     <span className="cast-text">{actor.name}</span>
                   </li>
                 ))}
@@ -73,11 +83,16 @@ function MovieRoom() {
         <div className="gallery">
           <div className="gallery-card">
             <ul className="gallery-list">
-              {imageArr && imageArr.slice(0, 6).map((poster) => (
-                <li key={poster.file_path} className="gallery-item">
-                  <img src={`https://image.tmdb.org/t/p/original${poster.file_path}`} alt="poster image" className="gallery-img" />
-                </li>
-              ))}
+              {imageArr &&
+                imageArr.slice(0, 6).map((poster) => (
+                  <li key={poster.file_path} className="gallery-item">
+                    <img
+                      src={`https://image.tmdb.org/t/p/original${poster.file_path}`}
+                      alt="poster image"
+                      className="gallery-img"
+                    />
+                  </li>
+                ))}
             </ul>
           </div>
         </div>
