@@ -4,6 +4,7 @@
 .movie-room-wrapper {
     display: flex;
     flex-wrap: nowrap;
+    margin-bottom: 100px;
 }
 
 .movie-overview {
@@ -63,3 +64,17 @@
     font-size: 20px;
 }
 
+.swiper-container{
+    width: 100%;
+  }
+  .swiper-wrapper {
+    width: 50%;
+  }
+  .swiper-slide {
+    text-align: center;
+    width: auto;
+  }
+  .slide-image {
+    height: 400px;
+    width: auto;
+  }

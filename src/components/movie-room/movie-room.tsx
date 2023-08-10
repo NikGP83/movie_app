@@ -7,6 +7,11 @@ import {
   useFetchMovieDetailsQuery,
   useFetchMovieImagesQuery,
 } from '../../services/movie-service';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { A11y, Navigation, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/a11y';
 import './movie-room.scss';
 
 function MovieRoom() {
@@ -35,7 +40,6 @@ function MovieRoom() {
     (crew) => crew.known_for_department === 'Directing',
   );
 
-  window.console.log(castArr);
   return (
     <>
       <Header />
@@ -81,20 +85,27 @@ function MovieRoom() {
           </div>
         </div>
         <div className="gallery">
-          <div className="gallery-card">
-            <ul className="gallery-list">
-              {imageArr &&
-                imageArr.slice(0, 6).map((poster) => (
-                  <li key={poster.file_path} className="gallery-item">
-                    <img
-                      src={`https://image.tmdb.org/t/p/original${poster.file_path}`}
-                      alt="poster image"
-                      className="gallery-img"
-                    />
-                  </li>
-                ))}
-            </ul>
-          </div>
+          <h2 className="gallery-title">Posters Gallery</h2>
+          <Swiper
+            autoplay={{ delay: 2000 }}
+            speed={1000}
+            navigation
+            slidesPerView={'auto'}
+            spaceBetween={10}
+            modules={[A11y, Navigation, Autoplay]}
+          >
+            {imageArr &&
+              imageArr.map((poster) => (
+                <SwiperSlide key={poster.file_path} className="gallery-item">
+                  <img
+                    src={`https://image.tmdb.org/t/p/original${poster.file_path}`}
+                    alt="poster image"
+                    className="gallery-img"
+                    height="400"
+                  />
+                </SwiperSlide>
+              ))}
+          </Swiper>
         </div>
       </section>
 

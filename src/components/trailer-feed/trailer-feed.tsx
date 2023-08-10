@@ -1,10 +1,10 @@
 import React from 'react';
-import './trailer-feed.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { A11y, Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/a11y';
-import { A11y, Navigation, Autoplay } from 'swiper/modules';
+import './trailer-feed.scss';
 
 const arr = [1, 2, 3, 4, 5, 6];
 
