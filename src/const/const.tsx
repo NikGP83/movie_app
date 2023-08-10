@@ -25,3 +25,4 @@ export const framerMotionAnimateSettings = {
   }),
   hidden: { opacity: 0.0 },
 };
+

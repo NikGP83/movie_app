@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import { API_ENDPOINTS } from './../const/const';
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { Credits, Images, MovieDetails, Movies, PopularActors } from '../types/types';
+import { Actor, Credits, Images, MovieDetails, Movies, PopularActors } from '../types/types';
 import { object, number, array } from 'yup';
 
 const headersOptions = {
@@ -47,7 +47,7 @@ export const movieAPI = createApi({
         headers: headersOptions,
       })
     }),
-    fetchActorById: build.query<PopularActors, string>({
+    fetchActorById: build.query<Actor, string>({
       query: (id) => ({
         url: `/person/${id}?language=en-US`,
         headers: headersOptions,
