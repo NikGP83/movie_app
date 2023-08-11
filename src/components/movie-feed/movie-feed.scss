@@ -1,14 +1,28 @@
 .movie-feed-promo {
   position: relative;
+  height: 742px;
 }
 
 .promo-poster-block {
+  position: relative;
+  text-align: center;
+}
+
+.empty-movie-block-text{
+  font-size: 60px;
+}
+
+.welcome-text {
+  position: absolute;
+  font-size: 50px;
+}
+
+.empty-movie-block {
   text-align: center;
 }
 
 .movie-feed-list-wrapper{
   border-top: 1px solid #d9d9d9;
-
 }
 
 .movie-feed-list {
@@ -40,6 +54,7 @@
 }
 
 .description-title {
+  font-size: 35px;
   text-transform: capitalize;
 }
 
@@ -54,7 +69,7 @@
 
 .description-text {
   text-align: left;
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 400;
 }
 
@@ -87,8 +102,8 @@
 .play-btn::after {
   content: "Watch trailer";
   left: 65px;
-  bottom: 13px;
-  font-size: 16px;
+  bottom: 6px;
+  font-size: 21px;
   position: absolute;
   color: #d9d9d9;
   font-weight: 600;

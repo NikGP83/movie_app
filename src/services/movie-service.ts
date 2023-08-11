@@ -59,7 +59,7 @@ export const movieAPI = createApi({
         headers: headersOptions,
       })
     }),
-    fetchVideoById: build.query<VideoData, number>({
+    fetchVideoById: build.query<VideoData, string>({
       query: (id) => ({
         url: `/movie/${id}/videos?language=en-US`,
         headers: headersOptions,

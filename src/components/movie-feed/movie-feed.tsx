@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import MovieCard from '../movie-card/movie-card';
 import { useFetchMoviesQuery } from '../../services/movie-service';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -13,7 +13,7 @@ import './movie-feed.scss';
 
 function MovieFeed() {
   const [selectedMovie, setSelectedMovie] = useState<MovieData>();
-  const [selectedId, setSelectedId] = useState<number>(0);
+  const [selectedId, setSelectedId] = useState('');
   const [isActiveTrailer, setIsActiveTrailer] = useState(false);
   const { trendingMovie } = useFetchMoviesQuery(
     '/trending/movie/day?language=en-US',
@@ -23,21 +23,16 @@ function MovieFeed() {
       }),
     },
   );
+
   const { moviesVideo } = useFetchVideoByIdQuery(selectedId, {
     selectFromResult: ({ data }) => ({
       moviesVideo: data?.results,
     }),
   });
-  // useEffect(() => {
-  //   if (typeof trendingMovie !== 'undefined') {
-  //     setSelectedMovie(trendingMovie[0]);
-  //     setSelectedId(trendingMovie[0].id);
-  //   }
-  // }, []);
 
   const selectMovieHandler = (filmItem: MovieData) => {
     setSelectedMovie(filmItem);
-    setSelectedId(+filmItem.id);
+    setSelectedId(filmItem.id.toString());
     setIsActiveTrailer(false);
   };
 
@@ -66,25 +61,31 @@ function MovieFeed() {
     <section className="movie-feed-section">
       <div className="movie-feed-promo">
         {isActiveTrailer ? renderTrailer() : null}
-        <div className="promo-poster-block">
-          <img
-            src={`https://image.tmdb.org/t/p/original${selectedMovie?.backdrop_path}`}
-            alt="trailer"
-            height="736"
-          />
-        </div>
-        <div className="movie-info-block">
-          <div className="movie-description">
-            <h2 className="description-title">{selectedMovie?.title}</h2>
-            <p className="description-text">{selectedMovie?.overview}</p>
-          </div>
-          <div className="play-btn-block">
-            <button
-              className="play-btn"
-              onClick={() => setIsActiveTrailer(true)}
-            ></button>
-          </div>
-        </div>
+        {!selectedMovie && <div className="empty-movie-block"><img height={742} src={`https://image.tmdb.org/t/p/original${trendingMovie[1].backdrop_path}`}></img></div>}
+        {selectedMovie && (
+          <>
+            <div className="promo-poster-block">
+              <img
+                src={`https://image.tmdb.org/t/p/original${selectedMovie?.backdrop_path}`}
+                alt="trailer"
+                height="736"
+              />
+            </div>
+            <div className="movie-info-block">
+              <div className="movie-description">
+                <h2 className="description-title">{selectedMovie?.title}</h2>
+                <p className="description-text">{selectedMovie?.overview}</p>
+              </div>
+              <div className="play-btn-block">
+                <button
+                  className="play-btn"
+                  onClick={() => setIsActiveTrailer(true)}
+                >
+                </button>
+              </div>
+            </div>
+          </>
+        )}
       </div>
       <div className="movie-feed-list-wrapper">
         <h3 className="movie-feed-list-title">Trending Now</h3>
