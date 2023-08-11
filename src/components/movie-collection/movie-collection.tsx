@@ -24,6 +24,7 @@ function MovieCollection() {
   }
   return (
     <section className="movie-collection">
+      <button onClick={() => setPage('2')}></button>
       <div className="film-categories-wrapper">
         <ul className="film-categories-list">
           <li className="film-categories-list-item">
