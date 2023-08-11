@@ -61,7 +61,7 @@ function MovieFeed() {
     <section className="movie-feed-section">
       <div className="movie-feed-promo">
         {isActiveTrailer ? renderTrailer() : null}
-        {!selectedMovie && <div className="empty-movie-block"><img height={742} src={`https://image.tmdb.org/t/p/original${trendingMovie[1].backdrop_path}`}></img></div>}
+        {!selectedMovie && <div className="empty-movie-block"><img height={742} src={`https://image.tmdb.org/t/p/original${trendingMovie[1].backdrop_path}`}></img>Hello</div>}
         {selectedMovie && (
           <>
             <div className="promo-poster-block">
