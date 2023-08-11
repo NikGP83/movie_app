@@ -20,6 +20,11 @@ export interface MovieData {
   video: boolean;
   vote_average: number;
   vote_count: number;
+  media_type?: string;
+}
+
+export interface TrendingMovies extends MovieData {
+  media_type: string;
 }
 
 export interface MovieDetails {
@@ -199,4 +204,22 @@ export interface Actor {
   place_of_birth: string;
   popularity: number;
   profile_path: string;
+}
+
+export interface VideoData {
+  id: number;
+  results: VideoArr[];
+}
+
+export interface VideoArr {
+  iso_639_1: string;
+  iso_3166_1: string;
+  name: string;
+  key: string;
+  site: string;
+  size: number;
+  type: string;
+  official: boolean;
+  published_at: string;
+  id: string;
 }

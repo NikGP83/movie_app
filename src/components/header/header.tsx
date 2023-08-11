@@ -18,22 +18,9 @@ function Header() {
               </li>
             ) : (
               <li className="header-item">
-                <Link to="/">
-                  <a href="#movies" className="header-link">
-                    <span className="header-text">Home</span>
-                  </a>
+                <Link to="/" className="header-link">
+                  <span className="header-text">Home</span>
                 </Link>
-              </li>
-            )}
-            {pathname === '/' ? (
-              <li className="header-item">
-                <Link to={APP_ROUTES.actorsList} className="header-link">
-                  <span className="header-text">Actors</span>
-                </Link>
-              </li>
-            ) : (
-              <li className="header-item">
-                <span className="header-text">Actors</span>
               </li>
             )}
             {pathname !== '/' ? (
@@ -63,18 +50,25 @@ function Header() {
                 </Link>
               </li>
             )}
-            {pathname === '/' && (
+            {pathname === '/' ? (
               <li className="header-item">
-                <a href="#trailers" className="header-link">
-                  <span className="header-text">Trailers</span>
-                </a>
+                <Link to={APP_ROUTES.actorsList} className="header-link">
+                  <span className="header-text">Actors</span>
+                </Link>
+              </li>
+            ) : (
+              <li className="header-item">
+                <span className="header-text">Actors</span>
               </li>
             )}
           </ul>
         </div>
         <div className="search-block">
-          <input type="text" id="search" className="search-field" />
-          <label htmlFor="search" className="search-field-label"></label>
+          <form>
+            <input type="text" id="search" className="search-field" />
+            <label htmlFor="search" className="search-field-label"></label>
+            <button>Search</button>
+          </form>
         </div>
       </nav>
     </header>

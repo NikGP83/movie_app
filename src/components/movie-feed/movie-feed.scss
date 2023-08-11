@@ -2,6 +2,10 @@
   position: relative;
 }
 
+.promo-poster-block {
+  text-align: center;
+}
+
 .movie-feed-list-wrapper{
   border-top: 1px solid #d9d9d9;
 
@@ -28,10 +32,13 @@
 
 
 .movie-info-block {
+  background-color: rgba(136, 133, 134, 0.6);
   width: 451px;
   position: absolute;
-  top: 340px;
-  left: 50px;
+  padding: 18px;
+  border-radius: 12px;
+  top: 31%;
+  left: 25%;
 }
 
 .description-title {

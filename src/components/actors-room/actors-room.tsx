@@ -11,7 +11,6 @@ function ActorsRoom() {
     return null;
   }
   const { data } = useFetchActorByIdQuery(id);
-  window.console.log(data);
   return (
     <>
       <Header />

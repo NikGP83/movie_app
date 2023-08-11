@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import './movie-collection.scss';
-import TrailerFeed from '../trailer-feed/trailer-feed';
 import MovieCard from '../movie-card/movie-card';
 import { API_ENDPOINTS, APP_ROUTES, framerMotionAnimateSettings } from '../../const/const';
 import { useFetchMoviesQuery } from '../../services/movie-service';
 import { motion } from 'framer-motion';
+import './movie-collection.scss';
 
 function MovieCollection() {
   const [endpoint, setEndpoint] = useState<string>(
@@ -12,12 +11,6 @@ function MovieCollection() {
   );
   const [page, setPage] = useState('1');
 
-  const createQuery = () => {
-    setPage((prev) => prev + 1);
-    const url = new URL(endpoint);
-    url.searchParams.set('?language=en-US&page=', (page + 1).toString());
-    setEndpoint(url.toString());
-  };
 
   const { movieData, totalPages } = useFetchMoviesQuery(endpoint, {
     selectFromResult: ({ data }) => ({
@@ -31,7 +24,6 @@ function MovieCollection() {
   }
   return (
     <section className="movie-collection">
-      <TrailerFeed />
       <div className="film-categories-wrapper">
         <ul className="film-categories-list">
           <li className="film-categories-list-item">
@@ -66,7 +58,6 @@ function MovieCollection() {
                 What&apos;s Popular
               </span>
             </button>
-            <button onClick={createQuery}>Сменить Барбя!</button>
           </li>
         </ul>
       </div>

@@ -35,7 +35,6 @@ function MovieRoom() {
   if (typeof data === 'undefined') {
     return null;
   }
-
   const movieCreatorName = crewArr?.find(
     (crew) => crew.known_for_department === 'Directing',
   );

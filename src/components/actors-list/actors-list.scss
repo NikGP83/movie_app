@@ -1,20 +1,23 @@
 .popular-people-list {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.popular-people-item {
+  margin-right: 18px;
 }
 
 .popular-people-link {
-    margin-right: 18px;
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 .popular-people-title {
-    margin-top: 0;
-    text-align: left;
+  margin-top: 0;
+  text-align: left;
 }
 
 .actors-img {
-    border-radius: 4px;
+  border-radius: 4px;
 }

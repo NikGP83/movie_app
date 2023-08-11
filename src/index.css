@@ -47,3 +47,18 @@ code {
     padding-left: 2rem;
   }
 }
+
+.swiper-container{
+  width: 100%;
+}
+.swiper-wrapper {
+  width: 50%;
+}
+.swiper-slide {
+  text-align: center;
+  width: auto;
+}
+.slide-image {
+  height: 400px;
+  width: auto;
+}
