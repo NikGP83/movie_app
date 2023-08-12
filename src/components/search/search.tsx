@@ -1,18 +1,17 @@
 import React, { FormEvent, useState } from 'react';
 import Header from '../header/header';
 import './search.scss';
-import { useSearchQuery } from '../../services/movie-service';
 import MovieCard from '../movie-card/movie-card';
 
 function Search() {
   const [searchString, setSearchString] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const { searchData } = useSearchQuery(searchQuery, {
-    selectFromResult: ({ data }) => ({
-      searchData: data?.results,
-    }),
-  });
+  // const { searchData } = useSearchQuery(searchQuery, {
+  //   selectFromResult: ({ data }) => ({
+  //     searchData: data?.results,
+  //   }),
+  // });
 
   const handleSearch = () => {
     setSearchQuery(searchString);
