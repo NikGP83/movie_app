@@ -9,13 +9,11 @@ function MovieCollection() {
   const [endpoint, setEndpoint] = useState<string>(
     API_ENDPOINTS.topRatedMovies,
   );
-  const [page, setPage] = useState('1');
 
 
-  const { movieData, totalPages } = useFetchMoviesQuery(endpoint, {
+  const { movieData } = useFetchMoviesQuery(endpoint, {
     selectFromResult: ({ data }) => ({
       movieData: data?.results,
-      totalPages: data?.total_pages,
     }),
   });
 
@@ -24,7 +22,6 @@ function MovieCollection() {
   }
   return (
     <section className="movie-collection">
-      <button onClick={() => setPage('2')}></button>
       <div className="film-categories-wrapper">
         <ul className="film-categories-list">
           <li className="film-categories-list-item">
@@ -54,7 +51,7 @@ function MovieCollection() {
             <button className="film-categories-list-button">
               <span
                 className="film-categories-list-text"
-                onClick={() => setEndpoint(API_ENDPOINTS.popularMovies + page)}
+                onClick={() => setEndpoint(API_ENDPOINTS.popularMovies)}
               >
                 What&apos;s Popular
               </span>
@@ -81,11 +78,6 @@ function MovieCollection() {
         <li className="pagination-item">
           <a className="pagination-link"></a>
         </li>
-        <div className="total-page-count">
-          <span className="total-page-count-text">
-            Total pages : {totalPages}
-          </span>
-        </div>
       </ul>
     </section>
   );

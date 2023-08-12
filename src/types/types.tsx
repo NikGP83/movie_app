@@ -223,3 +223,5 @@ export interface VideoArr {
   published_at: string;
   id: string;
 }
+
+export type SearchQuery = MovieData | PopularActors;

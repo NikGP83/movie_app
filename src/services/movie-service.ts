@@ -65,6 +65,12 @@ export const movieAPI = createApi({
         headers: headersOptions,
       })
     }),
+    // search: build.query<SearchQuery, string>({
+    //   query: (searchStr) => ({
+    //     url: `/search/multi?query=${searchStr}`,
+    //     headers: headersOptions,
+    //   })
+    // }),
   }),
 });
 

@@ -14,6 +14,7 @@ export const APP_ROUTES = {
   actorsList: 'actors-list',
   actorsProfile: 'actors-room',
   movieRoom: 'movie-room',
+  search: 'search',
 } as const;
 
 export const framerMotionAnimateSettings = {

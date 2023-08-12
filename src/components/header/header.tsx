@@ -61,14 +61,15 @@ function Header() {
                 <span className="header-text">Actors</span>
               </li>
             )}
+            {/* <li className="header-item">
+              <Link
+                to={`/${APP_ROUTES.search}`}
+                className="header-link logo-link"
+              >
+                <span className="header-text">Search</span>
+              </Link>
+            </li> */}
           </ul>
-        </div>
-        <div className="search-block">
-          <form>
-            <input type="text" id="search" className="search-field" />
-            <label htmlFor="search" className="search-field-label"></label>
-            <button>Search</button>
-          </form>
         </div>
       </nav>
     </header>
