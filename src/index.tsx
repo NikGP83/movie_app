@@ -9,6 +9,7 @@ import MovieRoom from './components/movie-room/movie-room';
 import { APP_ROUTES } from './const/const';
 import ActorsRoom from './components/actors-room/actors-room';
 import './index.css';
+import NotFoundPage from './components/not-found-page/not-found-page';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: `${APP_ROUTES.actorsProfile}/:id?`,
     element: <ActorsRoom />,
+  },
+  {
+    path: '*',
+    element: <NotFoundPage />
   },
 ]);
 
